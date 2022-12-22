@@ -11,10 +11,9 @@ int number = Convert.ToInt32(Console.ReadLine());
 int FindThird(int num)
 {
     int c = num;
-    while (c>999)
+    while (c > 999)
     {
         c = c / 10;
-        Console.WriteLine($"{c}");
     }
     return c % 10;
 }
