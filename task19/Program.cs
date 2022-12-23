@@ -51,7 +51,6 @@ bool IsPalindrom(int num)
 bool IsPalindromString(int num)
 {
     string number_string = Convert.ToString(num);
-    // number_string = 
     char[] arr = number_string.ToCharArray();
     Array.Reverse(arr);
     int number_revert = Convert.ToInt32(new String(arr));
