@@ -29,14 +29,33 @@ bool IsPalindrom(int num)
     int temp = num;
     int result = 0;
     int i = 10000;
+    int numb;
     while (temp > 0)
     {
-        int numb = temp % 10;
+        numb = temp % 10;
         result = result + numb * i;
         temp = temp / 10;
         i /= 10;
     }
     if (num == result)
+    {
+        return true;
+    }
+    else
+    {
+        return false;
+    }
+}
+
+
+bool IsPalindromString(int num)
+{
+    string number_string = Convert.ToString(num);
+    // number_string = 
+    char[] arr = number_string.ToCharArray();
+    Array.Reverse(arr);
+    int number_revert = Convert.ToInt32(new String(arr));
+    if (number_revert == num)
     {
         return true;
     }
