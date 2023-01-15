@@ -9,7 +9,7 @@ int degree = Convert.ToInt32(Console.ReadLine());
 
 if (degree>0)
 {
-    int getDegree = GetDegree(degree);
+    int getDegree = GetDegree(degree, number);
 
     Console.WriteLine($"{number} в степени {degree} = {getDegree}");
 }
@@ -19,12 +19,12 @@ else
 }
 
 
-int GetDegree(int deg)
+int GetDegree(int deg, int numb)
 {
     int rez = 1;
     for(int i = 0; i<deg;i++)
     {
-        rez *= number; 
+        rez *= numb; 
     }
     return rez;
 }

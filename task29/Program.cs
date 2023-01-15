@@ -25,12 +25,19 @@ void PrintMass(int[] arr)
     for(int i = 0; i<arr.Length; i++)
     {
         Console.Write($"{arr[i]}");
-        Console.Write(", ");
+        if( i != arr.Length-1)
+        {
+            Console.Write(", ");
+        }
     }
-    Console.Write("->[");
+    Console.Write(" -> [");
     for(int i = 0; i<arr.Length; i++)
     {
-        Console.Write($"{arr[i]}, ");
+        Console.Write($"{arr[i]}");
+        if( i != arr.Length-1)
+        {
+            Console.Write(", ");
+        }
     }
     Console.Write("]");
 }
