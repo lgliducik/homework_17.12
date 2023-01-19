@@ -10,7 +10,7 @@ double maxElem = FindMax(array);
 double minElem = FindMin(array);
 double diff = maxElem - minElem;
 
-Console.WriteLine($"max = {maxElem}");
+Console.WriteLine($"\nmax = {maxElem}");
 Console.WriteLine($"min = {minElem}");
 
 Console.WriteLine($"Разница между максимальным и минимальным элементов массива = {Math.Round(diff, 1)}");
@@ -56,8 +56,10 @@ double[] CreateRndDouble(int size, int min, int max)
 
 void PrintArrayDouble(double []arr)
 {
-    for(int i = 0; i<arr.Length; i++)
+    Console.Write("[");
+    foreach (double element in arr)
     {
-        Console.Write(arr[i] + " ");
+        Console.Write(element + " ");
     }
+    Console.Write("]");
 }

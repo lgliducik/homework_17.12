@@ -9,7 +9,7 @@ int[] array = CreateRndInt(4, -99, 99);
 int res = SumNotEvenNumber(array);
 
 PrintArray(array);
-Console.WriteLine($"сумму элементов, стоящих на нечётных позициях = {res}");
+Console.WriteLine($"\nCумма элементов, стоящих на нечётных позициях = {res}");
 
 int[] CreateRndInt(int size, int min, int max)
 {
@@ -24,10 +24,12 @@ int[] CreateRndInt(int size, int min, int max)
 
 void PrintArray(int []arr)
 {
-    for(int i = 0; i<arr.Length; i++)
+    Console.Write("[");
+    foreach (int element in arr)
     {
-        Console.Write(arr[i] + " ");
+        Console.Write(element + " ");
     }
+    Console.Write("]");
 }
 
 int SumNotEvenNumber(int[] arr)

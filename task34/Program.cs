@@ -7,15 +7,17 @@ int[] array = CreateRndInt(3, 0, 999);
 int res = FindEvenNumber(array);
 
 PrintArray(array);
-Console.WriteLine($"Количество четных чисел в массиве = {res}");
+Console.WriteLine($"\nКоличество четных чисел в массиве = {res}");
 
 
 void PrintArray(int []arr)
 {
-    for(int i = 0; i<arr.Length; i++)
+    Console.Write("[");
+    foreach (int element in arr)
     {
-        Console.Write(arr[i] + " ");
+        Console.Write(element + " ");
     }
+    Console.Write("]");
 }
 
 int FindEvenNumber(int[] arr)
