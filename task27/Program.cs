@@ -3,11 +3,17 @@
 // 82 -> 10
 // 9012 -> 12
 
-Console.WriteLine("Введите число:");
+Console.WriteLine("Введите положительное число:");
 int number = Convert.ToInt32(Console.ReadLine());
-int sumNumber = SumNumber(number);
-
-Console.WriteLine($"{number} -> {sumNumber}");
+if(number>0)
+{
+    int sumNumber = SumNumber(number);
+    Console.WriteLine($"{number} -> {sumNumber}");
+}
+else
+{
+    Console.WriteLine("Число не положительное");
+}
 
 int SumNumber(int num)
 {
