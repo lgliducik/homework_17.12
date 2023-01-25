@@ -15,8 +15,11 @@ double inputB2 = Convert.ToInt32(Console.ReadLine());
 double[] FindCrossPoint(double k1, double k2, double b1, double b2)
 {
     double[] res = new double[2];
-    res[0] = (b2-b1)/(k1-k2);
-    res[1] = k2* res[0] + b2;
+    if(k1 != k2 || b1 != b2)
+    {
+        res[0] = Math.Round((b2-b1)/(k1-k2), 1);
+        res[1] = Math.Round(k2* res[0] + b2, 1);
+    }
     return res;
 }
 
