@@ -39,5 +39,5 @@ void PrintMatrix(int[,,] matrix)
     }
 }
 
-int[,,] array3 = Create3DRndInt(2, 2,2, 1, 10);
+int[,,] array3 = Create3DRndInt(2, 2,2, 1, 99);
 PrintMatrix(array3);
