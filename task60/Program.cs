@@ -32,8 +32,7 @@ void PrintMatrix(int[,,] matrix)
         {
             for (int k = 0; k < matrix.GetLength(1); k++)
             {
-                if (k < matrix.GetLength(2) - 1) Console.Write($"{matrix[i, j, k], 5}, ({i}, {j}, {k})");
-                else Console.Write($"{matrix[i, j, k],5}, ({i}, {j}, {k})");
+                Console.Write($"{matrix[i, j, k],5}, ({i}, {j}, {k})");
             }
         }
         Console.WriteLine("]");

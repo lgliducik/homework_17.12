@@ -30,8 +30,7 @@ void PrintMatrix(int[,] matrix)
         Console.Write("[");
         for (int j = 0; j < matrix.GetLength(1); j++)
         {
-            if (j < matrix.GetLength(1) - 1) Console.Write($"{matrix[i, j], 5},");
-            else Console.Write($"{matrix[i, j],5}");
+            Console.Write($"{matrix[i, j],5}");
         }
         Console.WriteLine("]");
     }
@@ -42,18 +41,13 @@ int[] SortedRowsInMatrix(int[,] matrix)
     int rows = matrix.GetLength(0);
     int columns = matrix.GetLength(1);
     int[,] newmatrix = new int[rows, columns];
-    int[] arrayrow = new int[columns];
     int[] sumrowindex = new int[rows];
     for (int i = 0; i < rows; i++)
     {
-        for (int j = 0; j < columns; j++)
-        {
-            arrayrow[j] = matrix[i,j]; 
-        } 
         int sum = 0;
         for (int j = 0; j < columns; j++)
         {
-            sum += arrayrow[j]; 
+            sum += matrix[i,j]; 
         }
         Console.WriteLine($"sum = {sum}, index = {i} "); 
         sumrowindex[i] = sum;  
@@ -75,7 +69,6 @@ int[] FindMin(int[] arr)
     }
     return new int[2]{min, index};
 }
-
 
 int[,] array2D = CreateMatrixRndInt(4,4, 1,10);
 PrintMatrix(array2D);

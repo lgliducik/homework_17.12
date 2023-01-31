@@ -27,8 +27,7 @@ void PrintMatrix(int[,] matrix)
         Console.Write("[");
         for (int j = 0; j < matrix.GetLength(1); j++)
         {
-            if (j < matrix.GetLength(1) - 1) Console.Write($"{matrix[i, j], 5},");
-            else Console.Write($"{matrix[i, j],5}");
+            Console.Write($"{matrix[i, j],5}");
         }
         Console.WriteLine("]");
     }
@@ -42,15 +41,13 @@ int[,] MultMatrix(int[,] firstmatrix, int[,] secondmatrix)
     var matrix2Cols = secondmatrix.GetLength(1);
     int[,] multmatrix = new int[matrix1Rows, matrix2Cols];
     
-    for (int matrix1_row = 0; matrix1_row < matrix1Rows; matrix1_row++) 
-    {
-        // для каждой матрицы 1 строка, цикл по столбцам матрицы 2  
-        for (int matrix2_col = 0; matrix2_col < matrix2Cols; matrix2_col++) 
-        {
-            // цикл по столбцам матрицы 1 для вычисления скалярного произведения  
-            for (int matrix1_col = 0; matrix1_col < matrix1Cols; matrix1_col++) 
+    for (int row = 0; row < matrix1Rows; row++) 
+    { 
+        for (int col = 0; col < matrix2Cols; col++) 
+        { 
+            for (int runner = 0; runner < matrix1Cols; runner++) 
             {
-                multmatrix[matrix1_row, matrix2_col] += firstmatrix[matrix1_row, matrix1_col] * secondmatrix[matrix1_col, matrix2_col];
+                multmatrix[row, col] += firstmatrix[row, runner] * secondmatrix[runner, col];
             }  
         }  
     }  
